@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ec">
+  <meta name="description" content="Maison Éclat, institut de beauté. Découvrez nos prestations, notre galerie et demandez un rendez-vous.">
+  <title>Réservation — Maison Éclat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head><body>
+  <div class="announcement">Un moment pour vous, une beauté qui vous ressemble</div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Maison Éclat, accueil"><span class="brand-mark" aria-hidden="true">ME</span><span class="brand-copy"><strong>MAISON ÉCLAT</strong><small>INSTITUT DE BEAUTÉ</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html" data-page="index.html">Accueil</a><a href="prestations.html" data-page="prestations.html">Prestations</a><a href="galerie.html" data-page="galerie.html">Galerie</a><a href="reservation.html" data-page="reservation.html">Réservation</a><a href="contact.html" data-page="contact.html">Contact</a>
+      <a class="nav-cta" href="reservation.html">Prendre rendez-vous</a>
+    </nav>
+  </header>
+  <main><section class="page-hero section-pad"><p class="eyebrow">VOTRE MOMENT COMMENCE ICI</p><h1>Prenez du temps<br><em>pour vous.</em></h1><p>Envoyez une demande de rendez-vous. Le salon vous confirmera ensuite la disponibilité.</p><span class="gold-rule"></span></section><section class="booking section-pad" id="reservation">
+      <div class="booking-copy"><p class="eyebrow">VOTRE MOMENT COMMENCE ICI</p><h2>Et si vous preniez<br><em>un peu de temps ?</em></h2><p>Choisissez le soin qui vous fait envie. Votre demande sera préparée et envoyée à l'institut via WhatsApp afin de convenir ensemble d'un créneau.</p><div class="booking-promise"><span class="promise-icon">01</span><span>Une demande simple</span><span class="promise-icon">02</span><span>Une confirmation humaine</span></div></div>
+      <form class="booking-form" id="booking-form">
+        <div class="form-heading"><span>PRENDRE RENDEZ-VOUS</span><span class="form-required">* Champs obligatoires</span></div>
+        <div class="field-row"><label>Votre nom *<input name="name" type="text" autocomplete="name" placeholder="Nom et prénom" required minlength="2"></label><label>Votre téléphone *<input name="phone" type="tel" autocomplete="tel" placeholder="Votre numéro" required></label></div>
+        <label>Le soin souhaité *<select name="service" id="service-select" required><option value="">Choisissez une prestation</option><option>Soin du visage</option><option>Beauté des mains</option><option>Rituel bien-être</option><option>Autre / besoin de conseil</option></select></label>
+        <div class="field-row"><div class="date-field"><span class="field-label">Date souhaitée *</span><div class="date-select-row"><label class="date-part"><span>Jour</span><select id="booking-day" name="day" required><option value="">Jour</option></select></label><label class="date-part"><span>Mois</span><select id="booking-month" name="month" required><option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option></select></label><label class="date-part"><span>Année</span><select id="booking-year" name="year" required><option value="">Année</option></select></label></div><input type="hidden" name="date" id="booking-date"></div><label>Heure souhaitée<select name="time" required><option value="">Choisir</option><option>09:00</option><option>10:00</option><option>11:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option></select></label></div>
+        <label>Un détail à nous préciser <textarea name="message" rows="3" placeholder="Votre demande (facultatif)"></textarea></label>
+        <button class="button button-dark form-submit" type="submit">Envoyer ma demande sur WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="form-privacy">Vos informations seront intégrées au message WhatsApp que vous choisirez d'envoyer. Aucun rendez-vous n'est confirmé automatiquement.</p>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+      </form>
+    </section></main>
+  <footer class="site-footer"><a class="footer-brand" href="index.html">MAISON ÉCLAT</a><span>© <span id="year"></span> Maison Éclat · Démonstration de site web</span><a href="#top">Retour en haut ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>
